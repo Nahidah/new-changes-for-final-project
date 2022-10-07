@@ -64,7 +64,7 @@ function generateCV(){
    document.getElementById("objectiveT").innerHTML=document.getElementById("objectiveField").value;
 
    //work experience
-   let wes=document.getElementsByClassName(classNames,"weField");
+   let wes=document.getElementsByClassName("weField");
 
    let str="";
 
@@ -73,7 +73,7 @@ function generateCV(){
    }
    
 
-   document.getElementsById(elementId, "weT").innerHTML= str;
+   document.getElementById("weT").innerHTML= str;
 
 
    //academic qualification
@@ -85,7 +85,24 @@ function generateCV(){
     str1 += `<li> ${e.value} </li>`;
    }
 
-   document.getElementById(elementId,"aqT").innerHTML= str1;
+   document.getElementById("aqT").innerHTML= str1;
+
+   //code for setting image
+   let file=document.getElementById("imgField").files[0];
+
+   console.log(file);
+
+   let reader=new FileReader();
+
+   reader.readAsDataURL(file);
+
+   console.log(reader.result);
+
+   //put image into template
+   reader.onloadend = function() {
+    document.getElementById("imgTemplate").src = reader.result;
+   }
+ 
 
    document.getElementById("cv-form").style.display="none";
    document.getElementById("cv-template").style.display="block";
