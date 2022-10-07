@@ -64,21 +64,22 @@ function generateCV(){
    document.getElementById("objectiveT").innerHTML=document.getElementById("objectiveField").value;
 
    //work experience
-   let wes=document.getElementById("weField")
+   let wes=document.getElementById("weField");
 
    let str="";
 
    for(let e of wes){
-    str=str + `<Li> ${e.value} </Li>`;
+    str=str + `<li> ${e.value} </li>`;
    }
    
 
-   document.getElementById("weT").innerHTML= str;
+   document.getElementsById("weT").innerHTML= str;
+
 
    //academic qualification
-   let aqs=document.getElementsByClassName("eqField")
+   let aqs=document.getElementsByClassName("eqField");
 
-   let str1=""
+   let str1="";
 
    for(let e of aqs ){
     str1 += `<li> ${e.value} </li>`;
