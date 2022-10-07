@@ -10,6 +10,8 @@ body{
     font-size: 17px;
     color:black;
     line-height: 1.6;
+    background-image: url('../landing-images/wallpaper.jpg');
+    background-size: cover;
 }
 
 .button{

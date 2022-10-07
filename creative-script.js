@@ -64,7 +64,7 @@ function generateCV(){
    document.getElementById("objectiveT").innerHTML=document.getElementById("objectiveField").value;
 
    //work experience
-   let wes=document.getElementById("weField");
+   let wes=document.getElementsByClassName(classNames,"weField");
 
    let str="";
 
@@ -73,7 +73,7 @@ function generateCV(){
    }
    
 
-   document.getElementsById("weT").innerHTML= str;
+   document.getElementsById(elementId, "weT").innerHTML= str;
 
 
    //academic qualification
@@ -85,7 +85,7 @@ function generateCV(){
     str1 += `<li> ${e.value} </li>`;
    }
 
-   document.getElementById("aqT").innerHTML= str1;
+   document.getElementById(elementId,"aqT").innerHTML= str1;
 
    document.getElementById("cv-form").style.display="none";
    document.getElementById("cv-template").style.display="block";

@@ -10,12 +10,13 @@ body{
     font-size: 17px;
     color:black;
     line-height: 1.6;
+    background-image: url('../landing-images/wallpaper.jpg');
+    background-size: cover;
 }
 
 a{
     text-decoration: none;
-    width: 100%;
-    height: 100%;
+    
 
 }
 
@@ -39,8 +40,9 @@ a{
 }
 
 #showcase p{
-font-size: 20px;
+font-size: 40px;
 color:black;
+font-style:bold;
 }
 
 .button{
